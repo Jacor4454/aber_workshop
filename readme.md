@@ -26,9 +26,17 @@ first it performs the same connection script as lanyyard, but then starts a apir
 
 Once a transmission is heard, it is then checked against a set of previous encounters and, if it is new, it is sent to the API and logged in the users table to track encounters centrally for later viewing, to see who you met that day
 
-## API
-To add users to the apu, simply add entries to the users table at the top of main.js. 
+### API
+The api as a node.js file
+To add users to the api, simply add entries to the users table at the top of main.js. 
 
 WARNING: The storage is not persistent, so when restarted all interactions will be lost
 
 also add a 64x64 image linking the name to that table entry, you can make one by running helper.py locally
+
+
+## future improvements
+A simple fix for the lack of space it to add storage to cache image files for displaying, instant fix
+
+A solution that doesn't take extra hard ware would be hosting the files as bmp and passing it directly to lvgl, apparently this is possible without creating a seperate buffer, saving enough space to get everything to work
+I could not get this to work, the documentation is non-existent
